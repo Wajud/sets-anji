@@ -1,6 +1,7 @@
 import React from "react";
 import ceoImage from "../assets/ceo.jpg";
 import actionImage from "../assets/in-action.jpg";
+import actionImage2 from "../assets/set-new.jpeg";
 import aboutLanding from "../assets/another-about.jpg";
 
 import { motion } from "framer-motion";
@@ -49,7 +50,7 @@ const About = () => {
           </div>
         </div>
 
-        <section className="bg-white text-gray-800 p-6 pt-2 md:p-12 md:pt-1 -mt-6">
+        <section className="bg-white text-gray-800 p-6 pt-2 md:p-12 md:pb-28 md:pt-1 -mt-6">
           <h1 className="text-4xl font-bold text-blue-700 mb-12 md:hidden">
             The SET ANJI Standard
           </h1>
@@ -62,7 +63,7 @@ const About = () => {
               viewport={{ once: true }}
               className="row-start-2 md:row-start-1"
             >
-              <div className=" relative md:-top-12">
+              <div className=" relative md:-top-6">
                 <h1 className="text-4xl font-bold text-blue-700 mb-6 hidden md:block">
                   The SET ANJI Standard
                 </h1>
@@ -85,6 +86,12 @@ const About = () => {
                   sustainable, and dependable engineering practices that stand
                   the test of time.
                 </p>
+
+                 <img
+                src={actionImage2}
+                alt="SET ANJI team in action"
+                className="mt-12 md:hidden max-h-[20rem] w-full object-cover rounded-xl shadow-md"
+              />
               </div>
             </motion.div>
 
@@ -94,11 +101,19 @@ const About = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <img
+              <div className="w-full md:h-[35rem] flex flex-col gap-3">
+                <img
                 src={actionImage}
                 alt="SET ANJI team in action"
-                className="w-full  h-[25rem] object-top 3 md:h-[35rem]  object-cover rounded-xl shadow-md"
+                className=" max-h-[20rem] object-cover object-top rounded-xl shadow-md" />
+                <img
+                src={actionImage2}
+                alt="SET ANJI team in action"
+                className="hidden md:flex max-h-[20rem] object-cover rounded-xl shadow-md"
               />
+
+            </div>
+            
             </motion.div>
           </div>
         </section>
@@ -106,7 +121,7 @@ const About = () => {
 
         {/* CEO Spotlight */}
 
-        {/* <section className="flex flex-col md:flex-row items-center gap-8 bg-gray-100 p-6 pb-16 rounded-xl shadow-sm">
+        <section className="flex flex-col md:flex-row items-center gap-8 bg-gray-100 p-6 pb-16 rounded-xl shadow-sm">
           <h2 className="text-4xl text-center font-semibold text-blue-600 md:hidden">
             CEO Spotlight
           </h2>
@@ -153,7 +168,7 @@ const About = () => {
               </p>
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* End of CEO Spotlight */}
 
